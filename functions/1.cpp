@@ -19,27 +19,44 @@ using namespace std;
 //     }
 // }
 
+// bool allPrimes(int n){
+//     if(n<=1){
+//         return false;
+//     }
+//     for(int i=2;i<=n/2;i++){
+//         if(n%i==0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+bool isPrime(int n)
+{
+    if (n <= 1)
+    {
+        return false; // 0 and 1 are not prime numbers
+    }
 
-
-bool allPrimes(int n){
-    for(int i=2;i<=n;i++){
-        if(n%i==0){
-            return false;
-        }
-        else{
-           return true;
+    for (int i = 2; i <= n / 2; i++)
+    {
+        if (n % i == 0)
+        {
+            return false; // If n is divisible by i, then it's not a prime number
         }
     }
+
+    return true; // If no divisors found, n is a prime number
 }
 
 int main()
 {
-    // area(4);
-    // fact(4);
-    if(allPrimes(5)){
-        cout<<"is prime"<<endl;
-    }else{
-        cout<<"unprime";
+    if (isPrime(8))
+    {
+        cout << "is prime" << endl;
+    }
+    else
+    {
+        cout << "not prime" << endl;
     }
     return 0;
-}
+};

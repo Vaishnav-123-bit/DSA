@@ -1,0 +1,1 @@
+// k th max and min element in an array
