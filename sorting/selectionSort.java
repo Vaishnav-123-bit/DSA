@@ -1,16 +1,30 @@
 public class selectionSort {
-    void selection_Sort(int arr[], int n) {
-        for (int i = 0; i < n - 1; i++) {
-            int minElement = i;
-            for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[minElement]) {
-                    minElement = j;
+    // void selection_Sort(int arr[], int n) {
+    //     for (int i = 0; i < n - 1; i++) {
+    //         int minElement = i;
+    //         for (int j = i + 1; j < n; j++) {
+    //             if (arr[j] < arr[minElement]) {
+    //                 minElement = j;
+    //             }
+    //         }
+    //         int temp = arr[minElement];
+    //         arr[minElement] = arr[i];
+    //         arr[i] = temp;
+    //     }
+    // }
+    void selection_Sort(int arr[],int n){
+        for(int i=0;i<n-1;i++){
+            int minElement=i;
+            for(int j=i+1;j<n;j++){
+                if(arr[j]<arr[minElement]){
+                    minElement=j;
                 }
             }
-            int temp = arr[minElement];
-            arr[minElement] = arr[i];
-            arr[i] = temp;
+            int temp=arr[minElement];
+            arr[minElement]=arr[i];
+            arr[i]=temp;
         }
+      
     }
 
     public static void main(String[] args) {
